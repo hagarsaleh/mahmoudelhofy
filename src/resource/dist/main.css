@@ -1,0 +1,44 @@
+body {
+  height: 100%;
+  display: grid;
+  margin: 0;
+  grid-template-columns: 40% 60%;
+}
+body h1, body h2, body h3, body p {
+  color: white;
+}
+body .fixed {
+  grid-column: 1;
+  position: fixed;
+  height: 100%;
+  right: 60%;
+  border: 0 auto;
+  background-color: #bcc2cd;
+}
+body .sections {
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 50rem 50rem 50rem;
+}
+body .sections img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+body .sections h3 {
+  display: block;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+body .sections .sec1 {
+  grid-row: 1;
+  background-color: #8be9fd;
+}
+body .sections .sec2 {
+  grid-row: 2;
+  background-color: #ff5555;
+}
+
+/*# sourceMappingURL=main.css.map */
