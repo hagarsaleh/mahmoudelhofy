@@ -3,7 +3,7 @@
 :: setting default variables
 set USAGE=[ERROR]        Usage: manage.bat [build/deploy/commit]
 set CSS_PATH=src/resources/dist
-set SCSS_PATH=src/resources/main.scss
+set SCSS_PATH=src/main.scss
 
 :: if usages is manage.bat commit
 if "%1"=="commit" (
