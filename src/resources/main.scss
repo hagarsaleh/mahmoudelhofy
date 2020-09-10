@@ -13,13 +13,21 @@ $purple:    #bd93f9;
 $red:       #ff5555;
 $yellow:    #f1fa8c;
 
+@font-face {
+  font-family: 'AVENIRNEXTLTPRO';
+  src: url(fonts/AvenirNextLTPro-Regular.woff) format('woff')
+  , url(fonts/AvenirNextLTPro-Regular.woff2) format('woff2');
+  
+  
+
+}
 
 body{
-  font-family: 'Baloo 2', cursive;
+  //font-family: 'Baloo 2', cursive;
   margin: 0;
   h1,h2,h3,p{
     color: white;
-    font-family: 'Baloo 2', cursive;
+    font-family:  'AVENIRNEXTLTPRO';
     font-weight: lighter;
     line-height: 1.5rem;
 
