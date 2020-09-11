@@ -24,11 +24,17 @@ $colors:(
 @font-face {
   font-family: 'AVENIRNEXTLTPRO';
   src: url(../fonts/AvenirNextLTPro-Regular.woff) format('woff')
+<<<<<<< HEAD:src/resources/main.scss
   , url(../fonts/AvenirNextLTPro-Regular.woff2) format('woff2')
   ,url(../fonts/ARBFONTS-DINARABIC-BOLD.TTF)   
   ,url(fonts/AVENIRNEXTLTPRO-BOLD.OTF);
   
   
+=======
+  , url(../fonts/AvenirNextLTPro-Regular.woff2) format('woff2');
+
+
+>>>>>>> 6027e77778d1cc8c8bae80a4fe8cdc29f15936dc:src/main.scss
 
 }
 *{
