@@ -1,6 +1,6 @@
 @font-face {
   font-family: "AVENIRNEXTLTPRO";
-  src: url(../fonts/AvenirNextLTPro-Regular.woff) format("woff"), url(../fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../fonts/ARBFONTS-DINARABIC-BOLD.TTF), url(fonts/AVENIRNEXTLTPRO-BOLD.OTF);
+  src: url(../fonts/AvenirNextLTPro-Regular.woff) format("woff"), url(../fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../fonts/ARBFONTS-DINARABIC-BOLD.TTF), url(../fonts/AVENIRNEXTLTPRO-BOLD.OTF);
 }
 * {
   box-sizing: border-box;
@@ -43,6 +43,10 @@ body a:link {
   font-style: normal;
   text-decoration: none;
   height: 3rem;
+}
+body .sections a {
+  display: block;
+  height: auto;
 }
 body .fixed {
   position: fixed;
