@@ -2,6 +2,10 @@
   font-family: "AVENIRNEXTLTPRO";
   src: url(../fonts/AvenirNextLTPro-Regular.woff) format("woff"), url(../fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../fonts/ARBFONTS-DINARABIC-BOLD.TTF), url(../fonts/AVENIRNEXTLTPRO-BOLD.OTF);
 }
+@font-face {
+  font-family: "name";
+  src: url(../fonts/HOOG0554.TTF);
+}
 * {
   box-sizing: border-box;
 }
@@ -10,14 +14,14 @@ body {
   width: 100vw;
   max-width: 100%;
   padding: 0;
+  display: block;
   margin: 0;
   display: grid;
-  grid-template-columns: 40vw 60vw;
+  grid-template-columns: 40fr 60fr;
 }
 body h1, body h2, body h3, body p {
   color: white;
   font-family: "AVENIRNEXTLTPRO";
-  line-height: 1.4em;
 }
 body h1 {
   font-size: 2.5em;
@@ -26,43 +30,36 @@ body h1 {
   padding-bottom: 0.5%;
   margin: 0;
 }
+body ul {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body li {
+  display: block;
+}
 body .button {
-  margin-left: 5%;
-  padding: 2% 5%;
-  margin: 2%;
-  border-radius: 100px;
-  background-color: #bd93f9;
-  line-height: 4rem;
-  font-size: 1.4em;
+  padding: 1px 0px 4px 21px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #FB4D0F;
+  min-width: 12ch;
+  font-size: 2vw;
+  font-weight: bolder;
+  font-family: "AVENIRNEXTLTPRO";
   color: white;
-  height: 5rem;
-  width: 10rem;
+  height: 3vw;
+  width: 12vw;
   border: 0;
 }
 body a:link {
   font-style: normal;
   text-decoration: none;
-  height: 3rem;
-}
-body .sections a {
-  display: block;
-  height: auto;
-}
-body .fixed {
-  position: fixed;
-  position: -webkit-sticky;
-  grid-column: 1;
-  left: 0;
-  padding: 3%;
-  height: 100vh;
-  width: 40vw;
-  max-width: 40%;
-  background-color: #282a36;
 }
 body .sections {
   grid-column: 2;
   display: grid;
-  width: 60vw;
+  width: 60fr;
   grid-template-rows: repeat(5, 30fr);
 }
 body .sections img {
@@ -89,54 +86,177 @@ body .sections .sec5 {
 body .sec1, body .sec2, body .sec3, body .sec4, body .sec5 {
   margin: 0;
 }
-
-#contact {
-  grid-column: -1;
-  display: block;
-  justify-items: center;
-  flex-direction: row-reverse;
-  flex-basis: 0.4rem;
-  height: 1em;
-}
-#contact svg {
-  justify-items: flex-end;
-  width: 2.5rem;
-  margin: 1.5em;
-}
-#contact .fb {
+body .fixed {
+  display: inline-block;
+  position: fixed;
   grid-column: 1;
+  background-color: #0E152B;
+  height: 100vh;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1% 50% 10%;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) 2rem 1rem;
+  justify-content: center;
 }
-#contact .fb path {
-  fill: #FFFFFF;
-}
-#contact .twitter {
+body .fixed .fixed-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  margin-right: auto;
+  margin-left: auto;
+  align-content: center;
   grid-column: 2;
+  grid-row: 1;
 }
-#contact .twitter path {
-  fill: #FFFFFF;
+body .fixed .fixed-text p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.6vw;
 }
-#contact .whatsapp {
-  fill: #FFFFFF;
+body .fixed .fixed-text .name {
+  font-family: "name";
+  font-size: 3.7vw;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 0.85em;
+  font-weight: lighter;
+  max-width: 12ch;
 }
-#contact .mail {
-  fill: #FFFFFF;
+body .fixed .fixed-text .fixed-img {
+  display: block;
+  border-radius: 100%;
+  max-width: 12vw;
+  margin: 10%;
+  margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .fixed .button {
+  grid-row: 3;
+  grid-column: 2;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  transition-duration: 0.4s;
+}
+body .fixed .button:hover {
+  background-color: white;
+  /* Green */
+  color: black;
+}
+body .fixed #contact {
+  flex-basis: 50%;
+  list-style-type: none;
+  display: flex;
+  grid-row: -1;
+  padding: 0;
+  grid-column: 2/3;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-items: flex-end;
+}
+body .fixed #contact img {
+  transition-duration: 0.4s;
+  padding: 0;
+  width: 1.5rem;
+  margin: 0.5em;
 }
 
+/*
+#contact{
+
+ grid-column:-1;
+  display: block;
+  justify-items:  center;
+
+  flex-direction: row-reverse;
+  flex-basis: .4rem;
+  //position: relative;
+ // float: bottom;
+    height: 1em;
+
+  //padding:1em;
+  //padding-left:30%;
+  //grid-column: 1/4;
+
+
+  img {
+  justify-items: flex-end ;
+
+ width: 2.5rem;
+margin: 1em;
+
+}
+
+    .fb{
+
+      grid-column: 1;
+
+      path{
+
+      fill:white;
+          }
+      }
+    .twitter{
+
+      grid-column: 2;
+
+      path{
+
+      fill: map-get($colors, background-color);
+
+          }
+      }
+
+      .whatsapp{
+            fill: map-get($colors, background-color);
+      }
+      .mail{
+        fill: map-get($colors, background-color);
+      }
+
+
+}
+
+*/
 @media (min-width: 600px) {
   body {
     display: grid;
-    grid-template-columns: 40vw 60vw;
+    grid-template-columns: 4fr 6fr;
   }
   body .fixed {
-    grid-column: 1;
+    grid-column: 1/2;
     position: fixed;
     width: 40vw;
     max-width: 100%;
   }
+  body .fixed::before {
+    content: " ";
+    position: absolute;
+    clip-path: polygon(0 52%, 51% 52%, 51% 0, 85% 0%, 100% 0, 100% 15%, 100% 52%, 51% 52%, 51% 100%, 15% 100%, 0 100%, 0% 85%);
+    height: 2.6vw;
+    width: 2.6vw;
+    left: 2vw;
+    top: 1vw;
+    background-color: #FB4D0F;
+  }
+  body .fixed::after {
+    content: " ";
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    clip-path: polygon(100% 100%, 0 0, 0 100%);
+    height: 50px;
+    width: 50px;
+    background-color: #FB4D0F;
+  }
   body .sections {
     grid-column: 2;
     display: grid;
-    width: 60vw;
+    width: 60fr;
     max-width: 100%;
     max-height: 100vh;
     grid-template-rows: repeat(5 26rem);
@@ -163,21 +283,37 @@ body .sec1, body .sec2, body .sec3, body .sec4, body .sec5 {
     flex-direction: column;
   }
   body .fixed {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     position: unset;
     height: unset;
     width: 100vw;
     max-width: 100%;
   }
+  body .fixed .button {
+    display: none;
+  }
+  body .fixed .fixed-text #contact {
+    margin-block-start: auto;
+    margin-inline-end: auto;
+  }
+  body .fixed .fixed-text .fb, body .fixed .fixed-text .whats, body .fixed .fixed-text .linkedin {
+    display: block;
+    white-space: pre-wrap;
+    padding: 0;
+    width: 1.5rem;
+    margin: 0.5em;
+  }
   body .sections {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100fr;
     max-width: 100%;
   }
   body .sections img {
     display: block;
-    width: 100vw;
+    width: 100fr;
   }
 }
 
